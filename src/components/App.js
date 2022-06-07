@@ -1,27 +1,22 @@
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import Header from "./Header";
 import AddContact from "./AddContact";
 import ContactList from "./ContactList";
 
 
 function App() {
-  const contacts = [{
-    id: 1,
-    name: 'Flipper',
-    email: 'testing@test.com'
-  },
-  {
-    id: 2,
-    name: "bert",
-    email: "bert@bertmail.com"
-  }
-]
+  const [contacts, setContacts] = useState([]);
+
+  const addContactHandler = (contact) => {
+    setContacts([...contacts, contact]);
+  };
+
   return (
     <div>
       <Header />
-      <AddContact />
-      <ContactList contacts={contacts}/>
+      <AddContact addContactHandler={addContactHandler}/>
+      <ContactList contacts={contacts} />
     </div>
   );
 }
