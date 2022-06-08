@@ -13,12 +13,20 @@ class AddContact extends React.Component {
   add = (e) => {
     // prevents page refresh
     e.preventDefault();
+    if (!this.isValidEmail()) {
+      alert("Please enter a valid email.")
+      return;
+    }
     if (!this.state.name || !this.state.email) {
       alert("Please fill out all the fields.")
       return;
     }
     this.props.addContactHandler(this.state);
     this.setState({ name: "", email: "" });
+  }
+
+  isValidEmail() {
+    return (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.email));
   }
 
   render() {
