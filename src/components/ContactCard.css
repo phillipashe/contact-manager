@@ -1,0 +1,6 @@
+/* trick to increase specificity without !important */
+.trash.trash.trash.trash.trash.trash.trash.trash.trash.trash {
+  color: red;
+  float: right;
+  margin-top: 1.6vh;
+}

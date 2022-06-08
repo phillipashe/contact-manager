@@ -1,5 +1,6 @@
 import React from 'react';
 import user from "../images/user.png";
+import './ContactCard.css';
 
 const ContactCard = (props) => {
   const { key, name, email } = props.contact;
@@ -11,7 +12,7 @@ const ContactCard = (props) => {
         <div className="header">{name}</div>
         <div className="email">{email}</div>
       </div>
-      <i style={{ color: "red", marginTop: "7px" }} onClick={() => props.deleteHandler(key)} className="trash alternate outline icon"></i>
+      <i onClick={() => props.deleteHandler(key)} className="trash icon"></i>
     </div>
   )
 }
