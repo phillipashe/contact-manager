@@ -1,3 +1,7 @@
 .list-head {
-  margin-top: 40px;
+  margin-top: 50px;
+}
+
+.add-button {
+  float: right;
 }
