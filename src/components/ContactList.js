@@ -5,7 +5,7 @@ import './ContactList.css';
 
 const ContactList = (props) => {
   const deleteHandler = (key) => {
-    props.removeContactHandler(key);
+    props.deleteModalHandler(key, true);
   }
   const renderContactList = props.contacts.map((contact) => {
     return (
