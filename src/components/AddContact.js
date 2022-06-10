@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // class AddContact extends React.Component {
 const AddContact = (props) => {
-  // state = {
-  //   name: "",
-  //   email: ""
-  // }
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const navigate = useNavigate();
 
   // need to use arrow function here for this to refer to class
   // for regular functions, method invocation binds this to function
@@ -24,9 +22,11 @@ const AddContact = (props) => {
       alert("Please fill out all the fields.")
       return;
     }
-    props.addContactHandler({name, email});
+    props.addContactHandler({ name, email });
     setName("");
     setEmail("");
+
+    navigate('/');
   }
 
   const isValidEmail = () => {
