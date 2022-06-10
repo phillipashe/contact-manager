@@ -1,5 +1,6 @@
 import React from 'react';
 import ContactCard from './ContactCard';
+import './ContactList.css';
 
 const ContactList = (props) => {
   const deleteHandler = (key) => {
@@ -11,7 +12,9 @@ const ContactList = (props) => {
     )
   });
   return (
-    <div className="ui celled list">{renderContactList}</div>
+    <div className="list-head">
+      <div className="ui celled list">{renderContactList}</div>
+    </div>
   );
 };
 
