@@ -47,7 +47,7 @@ function App() {
   return (
     <div className="ui container">
 
-      <ModalWrapper input={modalOpen} id={selectedForDelete} removeContactHandler={removeContactHandler} />
+      <ModalWrapper isOpen={modalOpen} id={selectedForDelete} removeContactHandler={removeContactHandler} />
       <Header />
       <Router>
         <Routes>
