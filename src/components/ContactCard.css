@@ -2,5 +2,19 @@
 .trash.trash.trash.trash.trash.trash.trash.trash.trash.trash {
   color: red;
   float: right;
-  margin-top: 1.6vh;
+  margin-top: 15px;
+}
+
+.details {
+  float: left;
+  width: fit-content;
+}
+
+.content {
+  margin-left: 40px;
+}
+
+.image {
+  float: left;
+  margin-top: 1vh;
 }
