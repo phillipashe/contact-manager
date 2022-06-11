@@ -5,10 +5,16 @@ import './ContactCard.css';
 
 const ContactCard = (props) => {
   const { key, name, email } = props.contact;
+  const userInfo = {
+    key,
+    name,
+    email,
+    user
+  }
   return (
     <div className="item">
       <div className="details">
-        <Link to={`/details/${key}`}>
+        <Link state={userInfo} to={`/details/${key}`}>
           <img className="ui avatar image" src={user} alt="user" />
           <div className="content">
             <div className="key">{key}</div>

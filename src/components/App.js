@@ -6,6 +6,7 @@ import Header from "./Header";
 import AddContact from "./AddContact";
 import ContactList from "./ContactList";
 import ModalWrapper from "./ModalWrapper";
+import ContactDetails from "./ContactDetails";
 
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
           </Route>
           <Route path="/" element={<ContactList contacts={contacts} deleteModalHandler={deleteModalHandler} />}>
           </Route>
+          <Route path="/details/:id" element={<ContactDetails />}></Route>
         </Routes>
       </Router>
     </div>
