@@ -50,7 +50,7 @@ function App() {
 
       <ModalWrapper isOpen={modalOpen} id={selectedForDelete} removeContactHandler={removeContactHandler} />
       <Header />
-      <Router>
+      <Router basename='contact-manager'>
         <Routes>
           <Route path="/add" element={<AddContact addContactHandler={addContactHandler} />}>
           </Route>
