@@ -1,14 +1,20 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-const ContactDetails = (props) => {
-  const location = new useLocation(); 
-  const {user, name, email} = location.state;
+import './ContactDetails.css';
+
+const ContactDetails = () => {
+  const location = new useLocation();
+  const { user, name, email } = location.state;
 
   return (
-    <div>
-      <img src={user}></img>
-      <h1 style={{"margin-top": '100px'}}>{name}</h1>
-      <h2>{email}</h2>
+    <div className="ui card centered details-card">
+      <div className="image">
+        <img src={user}></img>
+      </div>
+      <div className="content">
+        <div className="header">{name}</div>
+        <div className="description">{email}</div>
+      </div>
     </div>
   );
 
